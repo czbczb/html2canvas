@@ -388,7 +388,7 @@ export class CanvasRenderer extends Renderer {
         }
 
         if (isTextInputElement(container) && container.value.length) {
-            const [fontFamily, fontSize] = this.createFontStyle(styles);
+            const [_, fontFamily, fontSize] = this.createFontStyle(styles);
             const {baseline} = this.fontMetrics.getMetrics(fontFamily, fontSize);
 
             this.ctx.font = fontFamily;
